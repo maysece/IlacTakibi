@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.KayitEkleme">
+    <ImageView
+        android:id="@+id/resimIV"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="@id/adEdtTxt"
+        app:layout_constraintEnd_toEndOf="@id/adEdtTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/kullan"
+        android:layout_marginTop="35dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/adEdtTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resimIV"
+        android:layout_marginTop="30dp"
+        app:layout_constraintWidth_percent="0.85">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/adTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Adınız :"
+            android:textSize="20sp"
+            android:fontFamily="@font/madimi_one"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/soyadEdtTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/adEdtTxt"
+        app:layout_constraintEnd_toEndOf="@id/adEdtTxt"
+        app:layout_constraintTop_toBottomOf="@id/adEdtTxt"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/soyadTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Soyadınız :"
+            android:fontFamily="@font/madimi_one"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameEdtTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/adEdtTxt"
+        app:layout_constraintEnd_toEndOf="@id/adEdtTxt"
+        app:layout_constraintTop_toBottomOf="@id/soyadEdtTxt"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kullanıcı Adı :"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="@font/madimi_one"
+            android:textSize="20sp"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEdtTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/adEdtTxt"
+        app:layout_constraintEnd_toEndOf="@id/adEdtTxt"
+        app:layout_constraintTop_toBottomOf="@id/usernameEdtTxt"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_marginTop="20dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Şifre :"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="@font/madimi_one"
+            android:textSize="20sp"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/kullaniciEkleBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/adEdtTxt"
+        app:layout_constraintEnd_toEndOf="@id/adEdtTxt"
+        app:layout_constraintTop_toBottomOf="@id/passwordEdtTxt"
+        android:layout_marginTop="30dp"
+        android:text="Kullanıcıyı Ekle"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:backgroundTint="@color/mavi" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

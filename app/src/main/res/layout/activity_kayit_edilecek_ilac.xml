@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.KayitEdilecekIlac">
+
+    <ImageView
+        android:id="@+id/resimIV"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:layout_constraintStart_toStartOf="@id/ilacAdiEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/ilacAdiEdtLay"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/kullan"
+
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ilacAdiEdtLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/resimIV"
+        app:layout_constraintWidth_percent="0.80"
+        android:layout_marginTop="20dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ilacAdiEdt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="İlaç Adı :"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/madimi_one"
+            android:gravity="center"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/günlükEdtTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ilacAdiEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/ilacAdiEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/ilacAdiEdtLay"
+        android:layout_marginTop="30dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/gunlukTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Günlük Alınacak Miktar :"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/madimi_one"
+            android:gravity="center"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/sabahTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ilacAdiEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/günlükEdtTxt"
+        android:text="Sabah  :"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:layout_marginTop="30dp"
+
+        />
+    <CheckBox
+        android:id="@+id/sabahSecimCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/günlükEdtTxt"
+        app:layout_constraintTop_toBottomOf="@id/günlükEdtTxt"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="@id/sabahTxt"
+        />
+
+    <TextView
+        android:id="@+id/ogleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ilacAdiEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/sabahTxt"
+        android:text="Öğle  :"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:layout_marginTop="30dp"
+        />
+    <CheckBox
+        android:id="@+id/ogleSecimCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/günlükEdtTxt"
+        app:layout_constraintTop_toBottomOf="@id/sabahSecimCB"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/ogleTxt"
+        />
+    <TextView
+        android:id="@+id/aksamTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ilacAdiEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/ogleTxt"
+        android:text="Akşam  :"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:layout_marginTop="30dp"
+        />
+    <CheckBox
+        android:id="@+id/aksamSecimCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/günlükEdtTxt"
+        app:layout_constraintTop_toBottomOf="@id/ogleSecimCB"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="@id/aksamTxt"
+        />
+
+    <TextView
+        android:id="@+id/hatirlaticiTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ilacAdiEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/ilacAdiEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/aksamTxt"
+        android:text="Hatırlatıcı Eklemek İster Misiniz?"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        />
+    <Button
+        android:id="@+id/kaydetBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/ilacAdiEdtLay"
+        app:layout_constraintEnd_toEndOf="@id/ilacAdiEdtLay"
+        app:layout_constraintTop_toBottomOf="@id/hatirlaticiTxt"
+        android:layout_marginTop="30dp"
+        android:text="Kaydet"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:backgroundTint="@color/mavi"
+   />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

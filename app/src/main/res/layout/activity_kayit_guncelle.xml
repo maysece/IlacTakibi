@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.GuncellemeEkrani">
+    <ListView
+        android:id="@+id/kullaniciList"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="@id/adTxt"
+        app:layout_constraintEnd_toEndOf="@id/adTxt"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+     />
+
+    <TextView
+        android:id="@+id/welcomeTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/kullaniciList"
+        android:layout_marginTop="30dp"
+        android:text="Kayıt Güncelleme Ekranı"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        app:layout_constraintWidth_percent="0.75"
+        android:gravity="center"
+        android:textColor="@color/mavi"
+        />
+
+
+    <EditText
+        android:id="@+id/adTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adı"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/welcomeTxt"
+        app:layout_constraintEnd_toEndOf="@id/welcomeTxt"
+        app:layout_constraintTop_toBottomOf="@id/welcomeTxt"
+
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/soyadTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Soyadı"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:textSize="20sp"
+       app:layout_constraintTop_toBottomOf="@id/adTxt"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/usernameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kullanıcı Adı"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/soyadTxt"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/passwordTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Şifre"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:textSize="20sp"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/usernameTxt"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/guncelleBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/welcomeTxt"
+        app:layout_constraintEnd_toEndOf="@id/welcomeTxt"
+        app:layout_constraintTop_toBottomOf="@id/passwordTxt"
+        android:text="Güncelle"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/madimi_one"
+        android:textStyle="bold"
+        android:backgroundTint="@color/mavi"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

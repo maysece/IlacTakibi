@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65"
+        android:src="@drawable/asi"
+        android:layout_marginTop="30dp"
+
+        />
+
+    <TextView
+        android:id="@+id/baslik"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="İLAÇ TAKİP SİSTEMİ"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoIV"
+        app:layout_constraintWidth_percent="0.75"
+        android:fontFamily="@font/madimi_one"
+        android:layout_marginTop="40dp"
+
+
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/usernameEdtTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/baslik"
+        app:layout_constraintEnd_toEndOf="@id/baslik"
+        app:layout_constraintTop_toBottomOf="@id/baslik"
+        android:layout_marginTop="20dp"
+        >
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/usernameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="Kullanıcı Adı :"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordEdtTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/baslik"
+        app:layout_constraintEnd_toEndOf="@id/baslik"
+        app:layout_constraintTop_toBottomOf="@id/usernameEdtTxt"
+        android:layout_marginTop="30dp"
+
+    >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/madimi_one"
+            android:gravity="center"
+            android:hint="Şifre :"
+            android:inputType="textPassword"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+</com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/kayitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/baslik"
+        app:layout_constraintTop_toBottomOf="@id/passwordEdtTxt"
+        android:layout_marginTop="30dp"
+        android:text="Kayıt Ol"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/madimi_one"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/mavi"
+
+    />
+    <Button
+        android:id="@+id/girisYapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Giriş Yap"
+        app:layout_constraintEnd_toEndOf="@id/baslik"
+        app:layout_constraintTop_toBottomOf="@id/passwordEdtTxt"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/madimi_one"
+        android:backgroundTint="@color/mavi"
+        android:layout_marginEnd="20dp"
+
+    />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
